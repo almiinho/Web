@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Mortex</title>
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+</head>
+<body>
+    <header>
+        <h1>Mortex</h1>
+    </header>
+    
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <section> 
+        <div class="container"> 
+          <div class="row"> 
+            <div class="col-md-4"> 
+              <div class="card"> 
+                <img 
+                  src="https://assetmanagerpim-res.cloudinary.com/images/w_600/q_90/bf1b2f7b3f2848229e52af0400212191_9366/IC9111_01_laydown.WebP" 
+                  class="card-img-top" 
+                  alt="Product 1" 
+                  height="500px" 
+                  width="1000px" 
+                /> 
+                <div class="card-body"> 
+                  <h5 class="card-title">HOODIES AND TROUSERS ADICOLOR</h5> 
+                  <h6 class="card-text">This set of hoodies and trousers for kids will be indispensable for walking on cool days. Soft fleece gives warmth and comfort, and the design is made in the classic adidas style.By buying our cotton clothes, you support more environmentally friendly cultivation and processing of cotton.</h6> 
+                  <button class="buy-button" onclick="openCardModal(1)">Buy Now</button>
+                </div> 
+              </div> 
+            </div> 
+ 
+            <div class="col-md-4"> 
+              <div class="card"> 
+                <img 
+                  src="https://storage.yandexcloud.net/cdn-prod.viled.kz/v3/original/135837_3.jpeg" 
+                  class="card-img-top" 
+                  alt="Product 2" 
+                  height="500px" 
+                  width="1000px" 
+                /> 
+                <div class="card-body"> 
+                  <h5 class="card-title">RALPH LAUREN</h5> 
+                  <h6 class="card-text">Main Material: Cotton Country of Manufacture: China Type : Polo Color: Blue Composition: 100% Cotton</h6> 
+                  <button class="buy-button" onclick="openCardModal(1)">Buy Now</button>
+                </div> 
+              </div> 
+            </div> 
+            </div>
+        </div>
+        </section>
+    
+    <footer>
+        <p>&copy; Mortex 2023</p>
+    </footer>
+
+        <div id="cardModal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeCardModal()">&times;</span>
+            <h2>Enter Card Details</h2>
+            <form>
+                <label for="cardNumber">Card Number:</label>
+                <input type="text" id="cardNumber" name="cardNumber" required><br><br>
+
+                <label for="expiryDate">Expiry Date:</label>
+                <input type="text" id="expiryDate" name="expiryDate" required><br><br>
+
+                <label for="cvv">CVV:</label>
+                <input type="text" id="cvv" name="cvv" required><br><br>
+
+                <button class="submit-button" onclick="processPayment()">Submit</button>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        function openCardModal(productId) {
+            var modal = document.getElementById("cardModal");
+            modal.style.display = "block";
+        }
+
+        function closeCardModal() {
+            var modal = document.getElementById("cardModal");
+            modal.style.display = "none";
+        }
+
+        function processPayment() {
+            alert("Simulating card identification and payment processing.");
+            closeCardModal();
+        }
+    </script>
+
+</body>
+</html>
